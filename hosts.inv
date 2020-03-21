@@ -1,0 +1,4 @@
+localhost ansible_connection=local
+
+[hetzner_servers]
+box.it-speeltuin.nl
