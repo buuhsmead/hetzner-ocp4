@@ -94,7 +94,7 @@
             name: google-secret
             namespace: openshift-config
           type: Opaque
-    - name: Create htpasswd identity rovider template
+    - name: Create redhatsso identity provider template
       set_fact:
         redhatsso_idp:
           google:
@@ -105,7 +105,7 @@
           mappingMethod: claim
           name: RedHatSSO
           type: Google
-    - name: Push htpasswd_idp to identity_roviders
+    - name: Push redhatsso_idp to identity_roviders
       set_fact:
         identity_roviders: "{{ identity_roviders }} + [ {{ redhatsso_idp }} ]"
   when: auth_redhatsso is defined
