@@ -22,3 +22,4 @@
     lb_name: "openshift-4-loadbalancer-{{ cluster_name }}"
   tags: 
     lb
+
