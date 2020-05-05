@@ -38,11 +38,13 @@ openshift_install_command: "/opt/openshift-install-{{ openshift_version }}/opens
 openshift_location: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/{{openshift_client_version}}"
 
 # reference to coreos qcow file
-coreos_version: 4.3.0-x86_64-qemu
+#coreos_version: 4.3.0-x86_64-qemu
+coreos_version: 4.3.8-x86_64-qemu.x86_64
 coreos_download_url: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/{{openshift_version}}/latest/rhcos-{{coreos_version}}.qcow2.gz"
 # How to get the checksum:
 #  ansible -m stat -a 'path=/var/lib/libvirt/images/rhcos-4.3.0.qcow2' localhost  | grep checksum
-coreos_checksum: "8cf621e0996881d759399c699d766f7a28ec000e"
+#coreos_checksum: "8cf621e0996881d759399c699d766f7a28ec000e"
+coreos_checksum: "d4fc3df5435b47a92ebff47a2c9c34997f7778ab"
 coreos_image_location: /var/lib/libvirt/images/rhcos-{{ coreos_version }}.qcow2
 
 
