@@ -2,3 +2,5 @@ cluster.yml
 .DS_Store
 certificate/
 box/
+.idea/
+hetzner-ocp4.iml
