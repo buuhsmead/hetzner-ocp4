@@ -55,6 +55,27 @@
     - le_azure_resource_group
   when: le_dns_provider == "azure"
 
+
+
+
+
+
+
+
+
+
+
+
+
+- name: Check required TransIP variables
+  assert:
+    that:
+      - lookup('vars',item) is defined
+    msg: "{{ item }} is not defined!"
+  with_items:
+    - transip_token
+  when: le_dns_provider == "transip"
+
 - name: Debug var only with -vv CloudFlare
   debug:
     msg: "{{ item }}={{ lookup('vars',item) }}"
@@ -114,3 +135,29 @@
     - le_public_domain
     - le_acme_directory
   when: le_dns_provider == "azure"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- name: Debug var only with -vv for TransIP
+  debug:
+    msg: "{{ item }}={{ lookup('vars',item) }}"
+    verbosity: 2
+  with_items:
+    - le_letsencrypt_account_email
+    - transip_token
+    - le_public_domain
+    - le_certificates_dir
+    - le_public_domain
+    - le_acme_directory
+  when: le_dns_provider == "transip"
