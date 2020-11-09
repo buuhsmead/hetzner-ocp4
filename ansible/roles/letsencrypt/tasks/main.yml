@@ -121,7 +121,7 @@
 
 - name: Create DNS record at TransIP
   uri:
-    url: https://api.transip.nl/v6/domains/it-speeltuin.eu/dns
+    url: "https://api.transip.nl/v6/domains/{{ public_domain }}/dns"
     method: POST
     headers:
       Authorization: "Bearer {{ transip_token }}"
@@ -226,7 +226,7 @@
   
 - name: Delete DNS record at TransIP
   uri:
-    url: https://api.transip.nl/v6/domains/it-speeltuin.eu/dns
+    url: "https://api.transip.nl/v6/domains/{{ public_domain }}/dns"
     method: DELETE
     headers:
       Authorization: "Bearer {{ transip_token }}"
@@ -248,3 +248,4 @@
   shell: "cat {{ le_certificates_dir }}/isrgrootx1.pem {{ le_certificates_dir }}/{{ le_public_domain }}/intermediate.crt >> {{ le_certificates_dir }}/{{ le_public_domain }}/ca-bundle.pem"
   args:
     creates: "{{ le_certificates_dir }}/{{ le_public_domain }}/ca-bundle.pem"
+
