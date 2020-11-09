@@ -6,5 +6,5 @@ hetzner_image: "/root/.oldroot/nfs/install/../images/CentOS-81-64-minimal.tar.gz
 hetzner_image_ignore_errors: false
 hetzner_webservice_username: "{{vault_hetzner_webservice_username}}"
 hetzner_webservice_password: "{{vault_hetzner_webservice_password}}"
-hetzner_hostname: "box.it-speeltuin.nl"
+hetzner_hostname: "guid.it-speeltuin.eu"
 
