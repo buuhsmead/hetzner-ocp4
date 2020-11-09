@@ -3,7 +3,7 @@ baseDomain: {{ public_domain }}
 compute:
 - name: worker
   platform: {}
-  replicas: 0
+  replicas: {{ compute_count }}
 controlPlane:
   name: master
   platform: {}
