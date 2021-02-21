@@ -18,9 +18,9 @@ master_memory_unit: 'MiB'
 #   You may use k, M, G, T, P or E suffixe
 master_root_disk_size: '120G'
 
-compute_count: 3
-compute_vcpu: 2
-compute_memory_size: 8192
+compute_count: 6
+compute_vcpu: 8
+compute_memory_size: 16384
 compute_memory_unit: 'MiB'
 # qemu-img image size specified.
 #   You may use k, M, G, T, P or E suffixe
@@ -30,8 +30,6 @@ vm_autostart: false
 
 # Important: OpenShift version must match to RHEL CoreOS version!
 
-# reference to OpenShift clients version
-openshift_client_version: stable
 # reference to OpenShift version
 openshift_version: 4.6.8
 openshift_install_command: "/opt/openshift-install-{{ openshift_version }}/openshift-install"

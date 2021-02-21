@@ -144,7 +144,7 @@
   when: sample_com_challenge is changed
 
 - pause:
-    seconds: 120
+    seconds: 300
   when: sample_com_challenge is changed
 
 - name: Let the challenge be validated and retrieve the cert and intermediate certificate
